@@ -1,0 +1,53 @@
+@import '../../../assets/css/ultilities/variable';
+
+.container {
+  min-height: 100vh;
+  background-color: $weak-blue-bg-color;
+  &-left {
+    display: none;
+  }
+  &-right {
+    padding: 17vw;
+    color: $blue-text;
+
+    &__title {
+      font-size: 25px;
+      font-weight: 600;
+      margin-bottom: 0 !important;
+    }
+
+    &__sub-title {
+      font-size: 12px;
+      font-weight: 400;
+      margin-bottom: 0 !important;
+    }
+    
+    &__sub-title:nth-of-type(3) {
+      margin-bottom: 32px;
+    }
+  }
+
+  
+}
+
+@media screen and (min-width: $mobile-size) {
+  .container {
+    display: flex;
+    &-left {
+      display: block;
+      flex: 1;
+      margin: auto;
+      img {
+        display: block;
+        width: 20vw;
+        height: 45vh;
+        margin: 0 auto;
+      }
+    }
+    &-right {
+      margin: auto;
+      padding: 0;
+      flex: 1;
+    }
+  }
+}

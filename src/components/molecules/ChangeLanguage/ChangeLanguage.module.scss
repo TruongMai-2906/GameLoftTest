@@ -1,0 +1,25 @@
+@import '../../../assets/css/ultilities/variable';
+
+.container {
+	display: none;
+	margin-left: 30%;
+	&__box {
+		width: 9.0625em;
+		height: 3.25em;
+		background-color: white;
+		color: $blue-text;
+	}
+	&__dropdown {
+		li {
+			width: 9.0625em;
+			height: 3.25em;
+			color: $blue-text;
+		}
+	}
+}
+
+@media screen and (min-width: $mobile-size) {
+    .container {
+			display: block;
+    }
+}

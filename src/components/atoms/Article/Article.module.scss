@@ -1,0 +1,17 @@
+@import '../../../assets/css/ultilities/variable';
+
+.container {
+
+  &__title {
+      font-weight: 500;
+      font-size: 11px;
+      color: $white-text;
+      text-decoration: none;
+  }
+}
+
+@media screen and (min-width: $mobile-size) {
+  .container {
+    
+  }
+}

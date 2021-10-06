@@ -1,0 +1,41 @@
+@import '../../../assets/css/ultilities/variable';
+
+.container {
+  background-color: $middle-blue-bg-color;
+	padding: 1em 0;
+  &__title {
+		font-size: 0.75em;
+		font-weight: 600;
+		color: $blue-text;
+		text-align: center;
+		margin-bottom: 0;
+  }
+	&__social {
+		text-align: center;
+		a {
+			font-size: 1.875em;
+			color: $blue-text;
+			margin: 0 5px;
+		}
+	}
+}
+
+@media screen and (min-width: $mobile-size) {
+  .container {
+    background-color: transparent;
+		margin-left: 30%;
+		&__title {
+			color: $white-text;
+			text-align: left;
+			font-size: 1.5625em;
+		}
+		&__social {
+			text-align: left;
+			a {
+				font-size: 3.25em;
+				color: $white-text;
+				margin: 0 5px;
+			}
+		}
+  }
+}

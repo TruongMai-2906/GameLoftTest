@@ -1,0 +1,33 @@
+@import '../../../assets/css/ultilities/variable';
+
+.container {
+  position: absolute;
+  bottom: 30px;
+  margin-left: 10vw;
+  margin-right: 16vw;
+  font-family: $Montserrat;
+  color: $white-text;
+  &__title {
+    font-size: 45px;
+    font-weight: 600;
+  }
+  &__sub-title {
+    margin-top: 7px;
+  }
+  &__description {
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 36px;
+  }
+}
+
+@media screen and (min-width: $mobile-size) {
+  .container {
+    margin-left: 23.5vw;
+    margin-right: 30vw;
+    &__description {
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+}
