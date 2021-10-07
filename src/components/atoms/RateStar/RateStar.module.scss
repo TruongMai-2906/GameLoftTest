@@ -1,12 +1,9 @@
-@import '../../../assets/css/ultilities/variable';
+@import "../../../assets/css/ultilities/variable";
 
 .container {
-
   margin-left: 3px;
 }
 
 @media screen and (min-width: $mobile-size) {
-  .container {
-    
-  }
+  
 }

@@ -1,25 +1,14 @@
-import React, { useState, useRef } from "react";
-import { useForm } from "react-hook-form";
-import { Container } from "react-bootstrap";
-import Slider from "react-slick";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper"
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
-import CustomTag from "../../atoms/CustomTag/CustomTag";
 import container from "./ImageSlide.module.scss";
-import facebook from "../../../assets/imgs/facebook.png";
-import twitter from "../../../assets/imgs/twitter.png";
-import instagram from "../../../assets/imgs/instagram.png";
-import share from "../../../assets/imgs/share.png";
-import search from "../../../assets/imgs/search.png";
 import leftArrow from "../../../assets/imgs/leftarrow2.png";
 import rightArrow from "../../../assets/imgs/rightarrow2.png";
 import asphalt9 from "../../../assets/imgs/asphalt9.jpg";
 SwiperCore.use([Navigation])
 const ImageSlide = (props) => {
-
-  const { register, handleSubmit } = useForm();
 
   const list = [
     {
@@ -102,7 +91,6 @@ const ImageSlide = (props) => {
   ];
 
   const [filterList, setFilterList] = useState(list);
-  const onSubmit = (data) => setFilterList(doFilterList(data.search));
 
   const doFilterList = (data) =>
     list.filter((item) => item.title.includes(data));
@@ -126,7 +114,7 @@ const ImageSlide = (props) => {
           onSlideChange={(swiper) => {console.log(swiper.activeIndex); setCurrentPost(swiper.activeIndex)}}
         >
           {filterList.map((e,i) =>
-            <SwiperSlide className={i !== currentPost ? `${container['container-bottom__item']}`: `${container['container-bottom__item']} ${container['container-bottom__item-active']}`}>
+            <SwiperSlide key={`slide${i}`} className={i !== currentPost ? `${container['container-bottom__item']}`: `${container['container-bottom__item']} ${container['container-bottom__item-active']}`}>
               <img src={asphalt9} alt="" />
               <a href={asphalt9} download="asphalt9.jpg" ><i className="far fa-arrow-alt-circle-down"></i></a>
             </SwiperSlide>

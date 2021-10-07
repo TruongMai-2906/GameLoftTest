@@ -1,14 +1,12 @@
 import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper"
+import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
 import CustomTag from "../../atoms/CustomTag/CustomTag";
 import container from "./Events.module.scss";
-import share from "../../../assets/imgs/share.png";
 
-SwiperCore.use([Navigation, Autoplay, Pagination])
+SwiperCore.use([Navigation, Autoplay, Pagination]);
 const Events = (props) => {
-
-	const list = [
+  const list = [
     {
       src: "",
       alt: "",
@@ -87,8 +85,8 @@ const Events = (props) => {
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos.",
     },
   ];
-	const [currentEvent, setCurrentEvent] = useState(0);
-  const ref = useRef(null) 
+  const [currentEvent, setCurrentEvent] = useState(0);
+  const ref = useRef(null);
   return (
     <div className={container.container}>
       <Swiper
@@ -97,14 +95,15 @@ const Events = (props) => {
         slidesPerView={"auto"}
         centeredSlides={true}
         autoplay={{
-          delay: 3000
+          delay: 3000,
         }}
-        pagination = {
-          {
-            el: ".pagination",
-            clickable: true,
+        pagination={{
+          el: ".pagination",
+          clickable: true,
+          renderBullet: (index, className) => {
+            return '<span class="' + className + ` ${container["container__bullet"]}` + '">' + (index + 1) + '</span>';
           }
-        }
+        }}
         onInit={(swiper) => {
           setCurrentEvent(swiper.activeIndex);
         }}
@@ -113,32 +112,54 @@ const Events = (props) => {
         }}
       >
         {list.map((e, i) => (
-          <SwiperSlide className={i !== currentEvent ? container["container__item"]: `${container["container__item"]} ${container["container__item-scale"]}`}>
+          <SwiperSlide
+            className={
+              i !== currentEvent
+                ? container["container__item"]
+                : `${container["container__item"]} ${container["container__item-scale"]}`
+            }
+            key={`event${i}`}
+          >
             <div className={container["container__inner"]}>
-              <a className={i !== currentEvent ? container['hide'] : ''} href="/" target="_blank">
-                <i class="fas fa-share-alt"></i>
+              <a
+                className={i !== currentEvent ? container["hide"] : ""}
+                href="/"
+                target="_blank"
+              >
+                <i className="fas fa-share-alt"></i>
               </a>
               <CustomTag
                 is="p"
                 content={e.title}
-                className={i !== currentEvent ? container["container__item-title-sub"] : container["container__item-title"]}
+                className={
+                  i !== currentEvent
+                    ? container["container__item-title-sub"]
+                    : container["container__item-title"]
+                }
               ></CustomTag>
               <CustomTag
                 is="p"
                 content={e.subTitle}
-                className={i !== currentEvent ? container['hide'] : container["container__item-subtitle"]}
+                className={
+                  i !== currentEvent
+                    ? container["hide"]
+                    : container["container__item-subtitle"]
+                }
               ></CustomTag>
-              <button className={i !== currentEvent ? container['hide'] : container["container__item-button"]}>
-                <CustomTag
-                  is="p"
-                  content="read more"
-                ></CustomTag>
+              <button
+                className={
+                  i !== currentEvent
+                    ? container["hide"]
+                    : container["container__item-button"]
+                }
+              >
+                <CustomTag is="p" content="read more"></CustomTag>
               </button>
             </div>
           </SwiperSlide>
         ))}
 
-        <div className="pagination"></div>
+        <div className="pagination" style={{paddingTop: "5em", justifyContent: "center"}}></div>
       </Swiper>
     </div>
   );

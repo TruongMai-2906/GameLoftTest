@@ -1,15 +1,12 @@
-@import '../../../assets/css/ultilities/variable';
+@import "../../../assets/css/ultilities/variable";
 
 .container {
   position: relative;
-  background-image: url('../../../assets/imgs/banner.png') ;
+  background-image: url("../../../assets/imgs/banner.png");
   background-position: 50% !important;
   background-size: cover !important;
   min-height: 100vh;
 }
 
 @media screen and (min-width: $mobile-size) {
-  .container {
-    
-  }
 }

@@ -1,10 +1,10 @@
-@import '../../../assets/css/ultilities/variable';
+@import "../../../assets/css/ultilities/variable";
 
 .container {
   &-bottom {
     &__item {
       width: 331px;
-      height: 11.5em;;
+      height: 11.5em;
       border-radius: 5px;
       border: 1px solid $strong-blue-border;
       transform: scale(0.9);
@@ -73,6 +73,5 @@
         height: 23.3125em;
       }
     }
-    
   }
 }

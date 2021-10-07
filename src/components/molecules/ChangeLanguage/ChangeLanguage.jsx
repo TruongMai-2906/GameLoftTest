@@ -1,18 +1,13 @@
-import React, { useState } from "react";
-import CustomTag from "../../atoms/CustomTag/CustomTag";
+import React from "react";
 import container from "./ChangeLanguage.module.scss";
-import { Container,Dropdown } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 
 const ChangeLanguage = (props) => {
-	const [lang, setLang] = useState("english")
-	const [isShow, setIsShow] = useState(false)
 
-	const doChangeLanguage = (lang) => {setLang(lang); setIsShow(!isShow)}
-	const showPropDown = () => console.log('here');
   return (
     <div className={container.container}>
       <Dropdown>
-        <Dropdown.Toggle style={{backgroundColor: '#fff'}} variant="" id="dropdown-basic">
+        <Dropdown.Toggle style={{backgroundColor: '#fff', color: "#2699FB"}} variant="" id="dropdown-basic">
           <i className="fas fa-globe-asia"></i>English
         </Dropdown.Toggle>
 

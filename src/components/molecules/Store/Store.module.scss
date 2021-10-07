@@ -1,7 +1,6 @@
-@import '../../../assets/css/ultilities/variable';
+@import "../../../assets/css/ultilities/variable";
 
 .container {
-  
   background-color: $middle-blue-bg-color;
   // height: 7vh;
   padding: 10px;
@@ -24,7 +23,7 @@
 
 @media screen and (min-width: $mobile-size) {
   .container {
-    display: flex; 
+    display: flex;
     padding: 5px 23.5vw;
     margin: auto 0;
     &__title {
@@ -45,4 +44,3 @@
     }
   }
 }
-

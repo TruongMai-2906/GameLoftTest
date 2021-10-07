@@ -9,27 +9,25 @@ import "aos/dist/aos.css";
 
 const HomePage = (props) => {
   const bannerDescription = {
-    title: 'Gameloft game',
-    articleList: [
-      'Racing',
-      'Action',
-    ],
+    title: "Gameloft game",
+    articleList: ["Racing", "Action"],
     stars: 4,
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud itation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit...',
-  }
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud itation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit...",
+  };
 
   useEffect(() => {
-    Aos.init({ duration: 1000})
-  }, [])
+    Aos.init({ duration: 1000 });
+  }, []);
 
   return (
-      <div>
-        <Banner bannerDescription={bannerDescription} />
-        <Contact />
-        <Community />
-        <EventsAndPromotions />
-        <ExclusiveContent />
-      </div>
+    <div>
+      <Banner bannerDescription={bannerDescription} />
+      <Contact />
+      <Community />
+      <EventsAndPromotions />
+      <ExclusiveContent />
+    </div>
   );
 };
 

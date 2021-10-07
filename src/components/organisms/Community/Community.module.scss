@@ -1,10 +1,8 @@
-@import '../../../assets/css/ultilities/variable';
-.container {
+@import "../../../assets/css/ultilities/variable";
 
-}
 
 @media screen and (min-width: $small-pc-size) {
-    .container {
-        min-height: 100vh;
-    }
+  .container {
+    min-height: 100vh;
+  }
 }

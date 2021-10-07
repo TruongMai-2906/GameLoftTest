@@ -84,13 +84,17 @@ const Footer = (props) => {
         <Container className="p-0">
           <div className={container["container__inner"]}>
             <div className={container["container__left"]}>
-              <div className={`${container["container__left-logo"]} ${container["container__left-logo-pc"]}`}>
+              <div
+                className={`${container["container__left-logo"]} ${container["container__left-logo-pc"]}`}
+              >
                 <a href="/">
                   <img src={logofooter} alt="logo" />
                 </a>
               </div>
               <Follow></Follow>
-              <div className={`${container["container__left-logo"]} ${container["container__left-logo-mb"]}`}>
+              <div
+                className={`${container["container__left-logo"]} ${container["container__left-logo-mb"]}`}
+              >
                 <a href="/">
                   <img src={logofooter} alt="logo" />
                 </a>
